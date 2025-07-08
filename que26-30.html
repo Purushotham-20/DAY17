@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main::before
+        {
+            content: "★";
+            color: black;
+        }
+        .main:hover::before
+        {
+            color: gold;
+        }
+        .lett:hover::first-letter
+        {
+            font-size: 50px;
+        }
+        .hovto
+        {
+            display: inline-block;
+            position: relative;
+            padding: 10px;
+            background-color: #f0f0f0;
+            cursor: pointer;
+        }
+        .hovto::after
+        {
+            content: " hover to see more";
+            opacity: 0;
+        }
+        .hovto:hover::after
+        {
+            opacity: 1;
+        }
+        a
+        {
+            text-decoration: none;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: darkred;
+            font-weight: bold;
+            position: relative;
+        }
+        a::after
+        {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 2px;
+            background-color: blue;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+        a:hover::after
+        {
+            transform: scaleX(1);
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        Hi
+    </div>
+    <div class="hovto">Hello welcome all</div>
+    <br>
+    <a href="www.https://www.google.com">Google</a>
+    <p class="lett">Welcome</p>
+</body>
+</html>
