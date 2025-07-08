@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button
+        {
+            background-color: aquamarine;
+        }
+        button:hover
+        {
+            background-color: blue;
+            transform: scale(1.1);
+        }
+        a:hover
+        {
+            color: red;
+        }
+        .tool
+        {
+            color: sandybrown;
+        }
+        .text
+        {
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.3 ease;
+        }
+        .tool:hover .text
+        {
+            color: aqua;
+            visibility: visible;
+            opacity: 1;
+        }
+        #p1:hover
+        {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <button>Submit</button>
+    <nav>
+        <a href="#">Home</a>
+        <br>
+        <a href="#">About</a>
+    </nav>
+    <div class="tool">
+        Hover me
+        <div class="text">This is tooltip</div>
+    </div>
+    <p id="p1">HI</p>
+</body>
+</html>
